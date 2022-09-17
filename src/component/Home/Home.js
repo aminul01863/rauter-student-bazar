@@ -20,6 +20,10 @@ const Home = () => {
     const rest = cart.filter((book) => book._id !== selectedItem._id);
     setCart(rest);
   };
+  const handelRemove = (selectedAll) => {
+    const remove = cart.filter((book) => book._id === selectedAll._id);
+    setCart(remove);
+  };
 
   return (
     <div className="home-container">
@@ -32,7 +36,10 @@ const Home = () => {
         ))}
       </div>
       <div className="cart-container">
-        <Cart cart={cart} handelRemoveItem={handelRemoveItem}></Cart>
+        <Cart
+          cart={cart}
+          handelRemoveItem={handelRemoveItem}
+          handelRemove={handelRemove}></Cart>
       </div>
     </div>
   );

@@ -1,0 +1,13 @@
+.books-container {
+    height: 350px;
+    width: auto;
+    border: 1px solid rgb(213, 208, 208);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.books-container img {
+    height: 200px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
